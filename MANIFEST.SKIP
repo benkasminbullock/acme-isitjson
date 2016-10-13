@@ -8,3 +8,5 @@ MYMETA..*
 .*\.bak
 ^Acme-IsItJSON-[0-9\.]+/$
 ^Acme-IsItJSON-[0-9\.]+\.tar\.gz$
+^xt/.*\.t$
+^lib/Acme/IsItJSON\.pod\.tmpl$

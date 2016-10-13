@@ -1,35 +1,3 @@
-=encoding UTF-8
-
-=head1 NAME
-
-Acme::IsItJSON - Is my variable JSON or a Perl data structure?
-
-=head1 SYNOPSIS
-
-    use Acme::IsItJSON 'is_it_json';
-    my $json = '{"zilog":"z80"}';
-    is_it_json ($json);
-    my $perl = {zilog => 'z80'};
-    is_it_json ($json);
-
-=head1 DESCRIPTION
-
-Not sure if your variable is a Perl data structure or a JSON string?
-
-This Perl module can help.
-
-=head1 FUNCTIONS
-
-=head2 is_it_json
-
-Given a variable containing something which you are not sure about,
-and it may or may not be JSON or a Perl data structure, feed it to
-this routine. This module uses support vector machines running on an
-OCAML cluster backed up by a Node pipeline in an S3 cloud to
-distinguish JSON from Perl data structures.
-
-=cut
-
 package Acme::IsItJSON;
 require Exporter;
 @ISA = qw(Exporter);
@@ -42,7 +10,7 @@ use strict;
 use Carp;
 use JSON::Parse qw/parse_json valid_json/;
 use JSON::Create 'create_json';
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 my @responses = (
     "That seems to be {X}.",

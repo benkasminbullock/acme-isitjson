@@ -15,3 +15,5 @@ MYMETA.*
 META.*
 ppport.h
 MANIFEST
+README
+lib/Acme/IsItJSON.pod
